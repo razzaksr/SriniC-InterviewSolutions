@@ -2,27 +2,23 @@
 using SrinivasanAssitance;
 
 Console.WriteLine("Hello, World!");
-ListClass list = new ListClass();
-list.InsAtStart("Rasheedha"); list.InsAtStart("Rajiya"); list.InsAtStart("Razak Mohamed");
-list.ViewByForward(list.head);
-list.InsAtLast("Sabarinathan"); list.InsAtLast("Vedhanjana");
-list.ViewByForward(list.head);
-list.InsAtSpecific(list.head.Next.Next.Next, "Zealous");
-list.ViewByForward(list.head);
-//list.DelAtStart();
-//list.DelAtSpecific(list.head.Next.Next.Next.Next);
-//list.DelAtSpecific(list.head);
-//list.DelAtSpecific(list.head.Next.Next.Next.Next.Next);
-//list.ViewByForward(list.head);
 
-//Console.WriteLine(list.Count(list.head.Next.Next));
+BSTClass tree = new BSTClass();
+tree.Place(45); tree.Place(50); tree.Place(4); tree.Place(34); tree.Place(12);
+tree.Place(6); tree.Place(7); tree.Place(21); tree.Place(11); tree.Place(89);
 
-//Console.WriteLine(list.Search("Razak Mohamed", list.head));
-//Console.WriteLine(list.Search("Razak", list.head));
-//Console.WriteLine(list.Search("Razak Mohamed", list.head.Next.Next));
-//Console.WriteLine(list.Search("Razak Mohamed", list.head.Next.Next.Next));
+//tree.PreOrder(tree.root);
+tree.InOrder();
 
-//list.Modify("Razak Mohamed","Razak Mohamed S",list.head);
-//list.Modify("Razak Mohamed", "Razak Mohamed S", list.head.Next.Next.Next.Next);
-//list.Modify("Razak", "Razak Mohamed S", list.head);
-//list.ViewByForward(list.head);
+//tree.Search(50);
+//tree.Search(45);
+
+//tree.Update(4, 77);
+//tree.InOrder();
+
+tree.Delete(11);
+tree.InOrder();
+tree.Delete(50);
+tree.InOrder();
+tree.Delete(4);
+tree.InOrder();
