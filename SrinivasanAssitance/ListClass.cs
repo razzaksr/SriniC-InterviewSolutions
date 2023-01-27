@@ -80,9 +80,31 @@ namespace SrinivasanAssitance
             Console.WriteLine(fullName+" has added after "+users.FullName);
         }
 
+        public void SortByAlpha(Node who)
+        {
+            Node final = null;
+
+            while (who != null)
+            {
+                final = who.Next;
+                while (final != null)
+                {
+                    if (who.FullName.CompareTo(final.FullName) > 0)
+                    {
+                        String temp = who.FullName;
+                        who.FullName = final.FullName;
+                        final.FullName = temp;
+                    }
+                    final = final.Next;
+                }
+                who = who.Next;
+            }
+        }
+
 
         public void ViewByForward(Node who)
         {
+            SortByAlpha(who);
             Node final = null;
 
             while (who != null)

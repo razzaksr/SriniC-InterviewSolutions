@@ -3,10 +3,10 @@ using SrinivasanAssitance;
 
 Console.WriteLine("Hello, World!");
 ListClass list = new ListClass();
-list.InsAtStart("Razak Mohamed"); list.InsAtStart("Rasheedha"); list.InsAtStart("Rajiya");
-//list.ViewByForward(list.head);
+list.InsAtStart("Rasheedha"); list.InsAtStart("Rajiya"); list.InsAtStart("Razak Mohamed");
+list.ViewByForward(list.head);
 list.InsAtLast("Sabarinathan"); list.InsAtLast("Vedhanjana");
-//list.ViewByForward(list.head);
+list.ViewByForward(list.head);
 list.InsAtSpecific(list.head.Next.Next.Next, "Zealous");
 list.ViewByForward(list.head);
 //list.DelAtStart();
@@ -24,5 +24,5 @@ list.ViewByForward(list.head);
 
 //list.Modify("Razak Mohamed","Razak Mohamed S",list.head);
 //list.Modify("Razak Mohamed", "Razak Mohamed S", list.head.Next.Next.Next.Next);
-list.Modify("Razak", "Razak Mohamed S", list.head);
-list.ViewByForward(list.head);
+//list.Modify("Razak", "Razak Mohamed S", list.head);
+//list.ViewByForward(list.head);
