@@ -16,9 +16,12 @@ tree.InOrder();
 //tree.Update(4, 77);
 //tree.InOrder();
 
-tree.Delete(11);
-tree.InOrder();
-tree.Delete(50);
-tree.InOrder();
-tree.Delete(4);
+//tree.Delete(11);
+//tree.InOrder();
+//tree.Delete(50);
+//tree.InOrder();
+//tree.Delete(4);
+//tree.InOrder();
+
+tree.Update(4, 77);
 tree.InOrder();

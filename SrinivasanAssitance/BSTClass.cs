@@ -140,9 +140,48 @@ namespace SrinivasanAssitance
             return min;
         }
 
+        List<Int32> tmp = new List<Int32>();
+
         public void Update(int oldOne,int newOne)
         {
             up(root,oldOne,newOne);
+            //root=ups(root, oldOne, newOne);
+            gather(root);
+            //tmp.ForEach(e => Console.WriteLine(e));
+            root = null;
+            tmp.ForEach(e => { Place(e); });
+        }
+
+        void gather(Node current)
+        {
+            if(current != null)
+            {
+                gather(current.Left);
+                tmp.Add(current.Digit);
+                gather(current.Right);
+            }
+
+            //root = null;
+            //tmp.ForEach(e => Place(e));
+        }
+
+        Node ups(Node current,int oldData,int newData)
+        {
+            if (current == null)
+                return current;
+            if (current.Digit > oldData)
+                current.Left = ups(current.Left, oldData,newData);
+            else if (current.Digit < oldData)
+                current.Right = ups(current.Right, oldData,newData);
+            else
+            {
+                current.Digit = newData;
+
+                current.Digit = findMin(current.Right);
+
+                current.Right=ups(current.Right, oldData,newData);
+            }
+            return current;
         }
 
         void up(Node current,int oldOne,int newOne)
