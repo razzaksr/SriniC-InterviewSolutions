@@ -165,6 +165,7 @@ namespace SrinivasanAssitance
             //tmp.ForEach(e => Place(e));
         }
 
+        /*
         Node ups(Node current,int oldData,int newData)
         {
             if (current == null)
@@ -183,7 +184,7 @@ namespace SrinivasanAssitance
             }
             return current;
         }
-
+        */
         void up(Node current,int oldOne,int newOne)
         {
             if (current != null)

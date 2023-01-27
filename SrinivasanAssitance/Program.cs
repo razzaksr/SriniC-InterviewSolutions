@@ -3,25 +3,21 @@ using SrinivasanAssitance;
 
 Console.WriteLine("Hello, World!");
 
-BSTClass tree = new BSTClass();
-tree.Place(45); tree.Place(50); tree.Place(4); tree.Place(34); tree.Place(12);
-tree.Place(6); tree.Place(7); tree.Place(21); tree.Place(11); tree.Place(89);
+/*
+StackMember<double> stackMember = new StackMember<double>();
 
-//tree.PreOrder(tree.root);
-tree.InOrder();
+stackMember.push(2.3); stackMember.push(9.1); stackMember.push(5.4);
+stackMember.push(8.2); stackMember.push(11.5); stackMember.push(4.1);
 
-//tree.Search(50);
-//tree.Search(45);
+//Console.WriteLine(stackMember.top);
+stackMember.Value();
 
-//tree.Update(4, 77);
-//tree.InOrder();
+stackMember.pop(); stackMember.pop();
+stackMember.Value();
+*/
 
-//tree.Delete(11);
-//tree.InOrder();
-//tree.Delete(50);
-//tree.InOrder();
-//tree.Delete(4);
-//tree.InOrder();
+IntStackMember stk = new IntStackMember();
+stk.push(33); stk.push(44); stk.push(90); stk.push(43); stk.push(10);
+stk.push(55); stk.push(89); stk.push(21); stk.push(56); stk.push(11);
 
-tree.Update(4, 77);
-tree.InOrder();
+stk.Value();
