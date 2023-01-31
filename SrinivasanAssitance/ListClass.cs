@@ -20,7 +20,22 @@ namespace SrinivasanAssitance
             }
         }
 
-        public void InsAtStart(String fullName)
+        public void AddToList()
+        {
+            String tmp = "";
+            Console.WriteLine("Enter the number of student names wish to add ");
+            //int size=Int32.Parse(Console.ReadLine());
+            int size = Convert.ToInt32(Console.ReadLine());
+            while (size>0 )
+            {
+                Console.WriteLine("Enter the Student name ");
+                tmp = Console.ReadLine();
+                InsAtStart(tmp);
+                size--;
+            }
+        }
+
+        void InsAtStart(String fullName)
         {
             Node mine = new Node(fullName);
 
@@ -33,6 +48,7 @@ namespace SrinivasanAssitance
             head = mine;
             Console.WriteLine(fullName + " has added before all ");
         }
+        /*
         public void InsAtLast(String fullName)
         {
             Node mine=new Node(fullName);
@@ -79,8 +95,9 @@ namespace SrinivasanAssitance
 
             Console.WriteLine(fullName+" has added after "+users.FullName);
         }
+        */
 
-        public void SortByAlpha(Node who)
+        void SortByAlpha(Node who)
         {
             Node final = null;
 
@@ -102,8 +119,9 @@ namespace SrinivasanAssitance
         }
 
 
-        public void ViewByForward(Node who)
+        public void ViewByForward()
         {
+            Node who = head;
             SortByAlpha(who);
             Node final = null;
 
@@ -188,8 +206,9 @@ namespace SrinivasanAssitance
         }
 
         // count number of nodes from given
-        public int Count(Node current)
+        public int Count()
         {
+            Node current = head;
             int total = 0;
 
             if (current == null)
@@ -208,8 +227,9 @@ namespace SrinivasanAssitance
         }
 
         // search Fullname from given node
-        public int Search(String fullName,Node current)
+        public int Search(String fullName)
         {
+            Node current = head;
             int position=1;
             if (current == null)
             {
@@ -229,15 +249,9 @@ namespace SrinivasanAssitance
         }
 
         // modification
-        public void Modify(String oldFullName,String newFullName,Node current)
+        public void Modify(String oldFullName, String newFullName)
         {
-            if (current == null)
-            {
-                Console.WriteLine("Modification can;t happen in invalid node");
-                return;
-            }
-            else
-            {
+            Node current = head;
                 while (current!=null)
                 {
                     if (current.FullName.Equals(oldFullName))
@@ -249,7 +263,7 @@ namespace SrinivasanAssitance
                     current = current.Next;
                 }
                 Console.WriteLine(oldFullName + " not found anywhere from the current node");
-            }
+            
         }
     }
 }

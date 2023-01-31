@@ -3,21 +3,13 @@ using SrinivasanAssitance;
 
 Console.WriteLine("Hello, World!");
 
-/*
-StackMember<double> stackMember = new StackMember<double>();
+// execution of only altered functions add, modify, View, count and search
 
-stackMember.push(2.3); stackMember.push(9.1); stackMember.push(5.4);
-stackMember.push(8.2); stackMember.push(11.5); stackMember.push(4.1);
-
-//Console.WriteLine(stackMember.top);
-stackMember.Value();
-
-stackMember.pop(); stackMember.pop();
-stackMember.Value();
-*/
-
-IntStackMember stk = new IntStackMember();
-stk.push(33); stk.push(44); stk.push(90); stk.push(43); stk.push(10);
-stk.push(55); stk.push(89); stk.push(21); stk.push(56); stk.push(11);
-
-stk.Value();
+ListClass lst = new ListClass();
+lst.AddToList();
+lst.ViewByForward();
+lst.Modify("Razak Mohamed S","Razak Mohamed Shahul Hameed");
+lst.ViewByForward();
+Console.WriteLine(lst.Count());
+Console.WriteLine(lst.Search("Razak Mohamed S"));
+Console.WriteLine(lst.Search("Sabarinathan S"));
